@@ -1,4 +1,6 @@
-def ft_harvest_total():
+def ft_harvest_total() -> None:
+    """Calculate the total harvest over three days
+    """
     i = int(input("Day 1 harvest: "))
     j = int(input("Day 2 harvest: "))
     k = int(input("Day 3 harvest: "))

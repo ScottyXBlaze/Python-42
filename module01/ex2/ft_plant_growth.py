@@ -1,5 +1,12 @@
 class Plant:
     def __init__(self, name: str, length: int, age: int) -> None:
+        """A class that create an instance of plane
+
+        Args:
+            name (str): Name of the plant
+            length (int): lenght of the plant in cm
+            age (int): age of the plant in day
+        """
         self.name = name
         self.length = length
         self.age = age

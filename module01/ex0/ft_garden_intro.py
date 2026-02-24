@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     plant = "Violets"
     height = 17
     age = 22

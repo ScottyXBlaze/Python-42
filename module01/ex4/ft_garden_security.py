@@ -5,6 +5,11 @@ class SecurePlant:
         self.__age = age
 
     def set_height(self, height: int):
+        """Set the height of the plant and checks if it's a valid one
+
+        Args:
+            height (int): height wanted to be set
+        """
         if height < 0:
             print(f"Invalid operation attempted: height {height} [REJECTED]")
             print("Security: Negative height rejected")
@@ -31,7 +36,7 @@ def main():
     print("=== Gargen Security System ===")
     rose = SecurePlant("Rose", 10, 11)
     print(f"Plant created: {rose.name}")
-    rose.set_height(-900)
+    rose.set_height(-4)
     print("")
     rose.set_age(3)
     print("")
