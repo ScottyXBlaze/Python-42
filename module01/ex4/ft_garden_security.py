@@ -1,17 +1,19 @@
 class SecurePlant:
     def __init__(self, name: str, height: int, age: int):
-        self.name = name
+        self.__name = name
         self.__height = height
         self.__age = age
+        print(f"Plant created: {self.__name}")
+
+    def get_info(self) -> None:
+        name = self.__name
+        height = self.__height
+        age = self.__age
+        print(f"Current plant: {name} ({height}cm, {age} days)")
 
     def set_height(self, height: int):
-        """Set the height of the plant and checks if it's a valid one
-
-        Args:
-            height (int): height wanted to be set
-        """
         if height < 0:
-            print(f"Invalid operation attempted: height {height} [REJECTED]")
+            print(f"Invalid operation attempted: height {height}cm [REJECTED]")
             print("Security: Negative height rejected")
         else:
             self.__height = height
@@ -32,16 +34,12 @@ class SecurePlant:
         return self.__age
 
 
-def main():
+if __name__ == "__main__":
     print("=== Gargen Security System ===")
     rose = SecurePlant("Rose", 10, 11)
-    print(f"Plant created: {rose.name}")
-    rose.set_height(-4)
+    rose.set_height(25)
+    rose.set_age(30)
     print("")
-    rose.set_age(3)
+    rose.set_height(-5)
     print("")
-    print(f"Current plant: Rose ({rose.get_height()}cm, {rose.get_age()})")
-
-
-if __name__ == "__main__":
-    main()
+    rose.get_info()

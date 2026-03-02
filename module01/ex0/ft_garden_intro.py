@@ -1,15 +1,9 @@
-def main() -> None:
-    plant = "Violets"
-    height = 17
-    age = 22
-
-    print("----- Welcome to my garden -----")
-    print(f"Plant: {plant}")
-    print(f"height: {height}cm")
-    print(f"Age: {age} days")
-    print("")
-    print("----- End of program -----")
-
-
 if __name__ == "__main__":
-    main()
+    print("=== Welcome to My Garden ===")
+    plant = "Rose"
+    height = 25
+    age = 30
+    print(f"Plant: {plant}")
+    print(f"Height: {height}cm")
+    print(f"Age: {age} days")
+    print("\n=== End of program ===")

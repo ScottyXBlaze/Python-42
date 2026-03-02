@@ -1,43 +1,29 @@
 class Plant:
     def __init__(self, name: str, length: int, age: int) -> None:
-        """A class that create an instance of plane
-
-        Args:
-            name (str): Name of the plant
-            length (int): lenght of the plant in cm
-            age (int): age of the plant in day
-        """
         self.name = name
         self.length = length
-        self.age = age
+        self.ages = age
 
-    def display(self):
-        print(f"{self.name}: {self.length}cm, {self.age} days old")
+    def get_info(self) -> None:
+        print(f"{self.name}: {self.length}cm, {self.ages} days old")
 
-    def grow(self):
+    def grow(self) -> None:
         self.length += 1
 
-    def ages(self):
-        self.age += 1
-
-    def get_info(self) -> int:
-        return self.length
-
-
-def main():
-    rose = Plant("Rose", 14, 31)
-    current_length = rose.get_info()
-    day = 1
-    print(f"=== Day {day} ===")
-    rose.display()
-    while day < 7:
-        rose.ages()
-        rose.grow()
-        day += 1
-    print(f"=== Day {day} ===")
-    rose.display()
-    print(f"Growth this week: +{rose.get_info() - current_length}cm")
+    def age(self) -> None:
+        self.ages += 1
 
 
 if __name__ == "__main__":
-    main()
+    day = 1
+    rose = Plant("Rose", 25, 30)
+    print(f"=== Day {day} ===")
+    rose.get_info()
+    while day < 7:
+        rose.grow()
+        rose.age()
+        day += 1
+    print(f"=== Day {day} ===")
+    rose.get_info()
+    print(f"Growth this week: +{day - 1}cm")
+

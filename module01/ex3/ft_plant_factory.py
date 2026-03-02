@@ -1,39 +1,17 @@
 class Plant:
-    def __init__(self, name: str, length: int, age: int) -> None:
+    plants = 0
+    def __init__(self, name: str, height: int, age: int) -> None:
+        Plant.plants += 1
         self.name = name
-        self.length = length
+        self.height = height
         self.age = age
-
-    def display(self):
-        print(f"{self.name}: {self.length}cm, {self.age} days old")
-
-    def grow(self):
-        self.length += 1
-
-    def ages(self):
-        self.age += 1
-
-    def get_info(self) -> int:
-        return self.length
-
-
-def main():
-    plants = [("Rose", 25, 30),
-              ("Oak", 200, 365),
-              ("Cactus", 5, 90),
-              ("Sunflower", 80, 45),
-              ("Fern", 15, 120)]
-
-    garden = []
-    count = 0
-    for plant in plants:
-        garden.append(Plant(*plant))
-        count += 1
-
-    for plant in garden:
-        print(f"Created : {plant.name} ({plant.length}cm, {plant.age} days)")
-    print(f"Total plants created : {count}")
-
+        print(f"Created: {self.name} ({self.height}cm, {self.age} days)")
 
 if __name__ == "__main__":
-    main()
+    print("=== Plant Factory Output ===")
+    Plant("Rose", 25, 30)
+    Plant("Oak", 200, 365)
+    Plant("Cactus", 5, 90)
+    Plant("Sunflower", 80, 45)
+    Plant("Fern", 15, 120)
+    print(f"\nTotal plants created: {Plant.plants}")
