@@ -62,7 +62,8 @@ class Vegetable(Plant):
         print(
             f"{self.name} (Vegetable): {self.height}cm,",
             f"{self.age} days, {self.harvest_season} harvest",
-            sep=" ")
+            sep=" "
+        )
         print(f"{self.name} is rich in {self.nutritional_value}")
 
 
