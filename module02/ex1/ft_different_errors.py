@@ -8,8 +8,8 @@ def garden_operations() -> None:
 
 
 def test_error_types() -> None:
-    print("=== Garden Error Types Demo ===", end="\n\n")
-    print("Testing ValueError...")
+    print("=== Garden Error Types Demo ===")
+    print("\nTesting ValueError...")
     try:
         _ = int("abc")
     except ValueError:
